@@ -1,0 +1,75 @@
+.contact {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    margin: 4rem auto;
+    background-color: var(--gray-one);
+    gap: 5lvh;
+    padding: 3lvw;
+}
+
+.contact h1 {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--white);
+}
+
+.address {
+    color: var(--white);
+    display: grid;
+    gap: 3lvh;
+    min-width: 80lvw;
+    max-width: 80lvw;
+    border: solid var(--white) 2px;
+    padding: 2rem;
+    border-radius: 0.8rem;
+    text-align: center;
+}
+
+.address i {
+    font-size: 3rem;
+}
+
+.address p {
+    font-size: 1.2rem;
+}
+
+.talkToUs {
+    margin: 5lvh auto;
+    min-width: 80lvw;
+    max-width: 80lvw;
+    text-align: center;
+    display: grid;
+    gap: 3lvh;
+    color: var(--white);
+}
+
+.talkToUs div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.talkToUs input,
+.talkToUs textarea {
+    min-width: 50lvw;
+    max-width: 50lvw;
+    border-radius: 0.5rem;
+    background-color: var(--gray-two);
+    color: var(--white);
+    min-height: 1.5rem;
+    outline: none;
+    border: solid var(--white) 2px;
+    padding: 2lvw;
+}
+
+.submitBtn {
+    max-width: fit-content;
+    padding: 2lvw;
+    margin: 0 auto;
+    outline: none;
+    border: none;
+    background-color: var(--white);
+    color: var(--gray-one);
+    border-radius: 0.8rem;
+}

@@ -1,39 +1,52 @@
 .entryImages {
-    min-width: 100lvw;
+    min-width: 100svw;
     min-height: 100svh;
-    /* background: url('./src/assets/EntryImage.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat; */
-    background-color: var(--gray-one);
     display: grid;
     justify-content: center;
     align-items: center;
-   
-}
-
-/* .entryImages img {
-    opacity: 0.5;
-    min-width: 100lvw;
-    min-height: 100svh;
-    object-fit: cover;
-    max-width: 100lvw;
+    background: url('./src/assets/frente-de-loja.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-color: var(--gray-one);
     position: relative;
-} */
-
-.entryText {
-    position: absolute;
-    min-height: 80lvh;
-    display: grid;
-    text-align: center;
-    color: var(--white);
+    margin: 10lvh auto;
 }
 
-.entryText p:nth-of-type(1) {
+.entryImages p:nth-of-type(1) {
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 3rem;
+    color: var(--white);
+    position: absolute;
+    bottom: 15lvh;
+    text-align: center;
 }
 
 .entryText p:nth-of-type(2) {
-    font-size: 1.5rem;
+    font-size: 2rem;
+    color: var(--gray-one);
+}
+
+.product-image {
+    max-width: 60lvw;
+    object-fit: cover;
+    margin: 0 auto;
+}
+
+.product-box-presentation:nth-child(odd) {
+    background-color: var(--white);
+    color: var(--gray-one);
+}
+
+.product-box-presentation:nth-child(even) {
+    background-color: var(--gray-one);
+    color: var(--white);
+}
+
+.product-box-presentation {
+    display: grid;
+    background-color: var(--white);
+    text-align: center;
+    gap: 2rem;
+    padding: 2rem;
 }

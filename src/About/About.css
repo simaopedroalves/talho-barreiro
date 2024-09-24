@@ -1,0 +1,13 @@
+.about {
+    color: var(--gray-one);
+    background-color: var(--white);
+    display: grid;
+    text-align: center;
+    gap: 2rem;
+    margin: 2rem auto;
+}
+
+.about h1 {
+    font-weight: bold;
+    text-transform: uppercase;
+}
