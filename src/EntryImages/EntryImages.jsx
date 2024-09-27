@@ -34,7 +34,7 @@ export function EntryImages () {
             <Product product = {{
                 title: "Bochecha Porco", 
                 description: 'Estas bochechas são muito boas!',
-                urlImage: "/src/assets/bochecha-porco.jpg"
+                urlImage: "./src/assets/bochecha-porco.jpg"
                 }}
             />  
              
