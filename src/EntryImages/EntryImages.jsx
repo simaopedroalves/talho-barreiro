@@ -1,4 +1,5 @@
-import './EntryImages.css'
+import './EntryImages.css';
+import bochechaPorcoImg from '/src/images/bochecha-porco.jpg';
 
 export function EntryImages () {
     return (
@@ -34,7 +35,7 @@ export function EntryImages () {
             <Product product = {{
                 title: "Bochecha Porco", 
                 description: 'Estas bochechas são muito boas!',
-                urlImage: "./src/assets/bochecha-porco.jpg"
+                urlImage: bochechaPorcoImg
                 }}
             />  
              
@@ -49,6 +50,8 @@ function Product ({product}) {
                 <h1>{product.title}</h1>
                 <p>{product.description}</p>
                 <img src={product.urlImage} alt={product.title} className='product-image'/>
+                {/* <img src={bochechaPorcoImg} alt={product.title} className='product-image'/> */}
+
             </div>
         </>
     );
