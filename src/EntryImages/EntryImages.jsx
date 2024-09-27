@@ -48,7 +48,7 @@ function Product ({product}) {
             <div className='product-box-presentation'>
                 <h1>{product.title}</h1>
                 <p>{product.description}</p>
-                <img src={product.urlImage} alt={product.title} className='product-image'/>
+                <img srcSet={product.urlImage} alt={product.title} className='product-image'/>
             </div>
         </>
     );
