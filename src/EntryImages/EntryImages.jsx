@@ -13,28 +13,28 @@ export function EntryImages () {
             <Product product = {{
                 title: "Picanha", 
                 description: 'Esta picanha é que é boa',
-                urlImage: '/src/assets/picanha.jpg'
+                urlImage: "/src/assets/picanha.jpg"
                 }}
             />
 
             <Product product = {{
                 title: "Vazio", 
                 description: 'Este Vazio é muito bom!',
-                urlImage: '/src/assets/vazio.jpg'
+                urlImage: "/src/assets/vazio.jpg"
                 }}
             />  
 
             <Product product = {{
                 title: "Tomahawk", 
                 description: 'Este tomahawk é muito bom!',
-                urlImage: '/src/assets/tomahawk.jpg'
+                urlImage: "/src/assets/tomahawk.jpg"
                 }}
             />  
 
             <Product product = {{
                 title: "Bochecha Porco", 
                 description: 'Estas bochechas são muito boas!',
-                urlImage: '/src/assets/bochecha-porco.jpg'
+                urlImage: "/src/assets/bochecha-porco.jpg"
                 }}
             />  
              
@@ -48,7 +48,7 @@ function Product ({product}) {
             <div className='product-box-presentation'>
                 <h1>{product.title}</h1>
                 <p>{product.description}</p>
-                <img srcSet={product.urlImage} alt={product.title} className='product-image'/>
+                <img src={product.urlImage} alt={product.title} className='product-image'/>
             </div>
         </>
     );
