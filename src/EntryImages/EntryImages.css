@@ -4,7 +4,7 @@
     display: grid;
     justify-content: center;
     align-items: center;
-    background: url('./Images/frente-de-loja.jpg');
+    background: url('/Images/frente-de-loja.jpg');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: top;
