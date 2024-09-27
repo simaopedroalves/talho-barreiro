@@ -3,7 +3,7 @@ export function Navbar() {
     return (
       <div>
             <header className="header">
-                <img src="/dist/assets/logo-img.jpeg" onClick={handleBackHome} alt="" id="logoImg"/>
+                <img src="./Images/logo-img.jpeg" onClick={handleBackHome} alt="" id="logoImg"/>
                 <h1 className="companyName">Talho Barreiro</h1>
                 <i className="fa-solid fa-ellipsis" onClick={handleMenu}></i>
             </header>
