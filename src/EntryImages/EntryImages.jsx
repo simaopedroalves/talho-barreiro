@@ -14,7 +14,7 @@ export function EntryImages () {
             <Product product = {{
                 title: "Picanha", 
                 description: 'Esta picanha é que é boa',
-                urlImage: "/public/Images/picanha.jpg"
+                urlImage: "./Images/picanha.jpg"
                 }}
             />
 
