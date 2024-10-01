@@ -4,6 +4,7 @@ import './Navbar/Navbar.css'
 import {EntryImages} from './EntryImages/EntryImages.jsx'
 import {About} from './About/About.jsx'
 import {Contact} from './Contact/Contact.jsx'
+import {Footer} from './Footer/Footer.jsx'
 
 
 function App () {
@@ -13,6 +14,7 @@ function App () {
     <EntryImages />
     <About />
     <Contact />
+    <Footer />
     </>
   );
 }

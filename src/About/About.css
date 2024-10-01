@@ -11,3 +11,10 @@
     font-weight: bold;
     text-transform: uppercase;
 }
+
+.aboutImage {
+    object-fit: cover;
+    max-width: 100lvw;
+    max-height: 50lvh;
+    border-radius: 1rem;
+}

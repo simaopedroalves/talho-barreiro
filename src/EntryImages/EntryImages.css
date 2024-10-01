@@ -4,20 +4,21 @@
     display: grid;
     justify-content: center;
     align-items: center;
-    background: url('/public/Images/frente-de-loja.jpg');
-    background-size: contain;
+    background: url('/Images/quatro-vazio.jpg');
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: top;
-    background-color: var(--gray-one);
+    background-position: center;
+    /* background-color: var(--gray-one); */
     position: relative;
     margin: 10lvh auto;
+    border-image: linear-gradient(90deg, var(--black-two), var(--brown-two)) fill 1;
 }
 
 .entryImages p:nth-of-type(1) {
     font-weight: bold;
     font-size: 3rem;
     color: var(--white);
-    position: absolute;
+    /* position: absolute; */
     bottom: 15lvh;
     text-align: center;
 }

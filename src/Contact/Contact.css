@@ -40,7 +40,7 @@
     max-width: 80lvw;
     text-align: center;
     display: grid;
-    gap: 3lvh;
+    gap: 4lvh;
     color: var(--white);
 }
 
@@ -50,8 +50,24 @@
     align-items: center;
 }
 
-.talkToUs input,
-.talkToUs textarea {
+.talkToUs .messageDiv {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 4lvw;
+    text-align: left;
+}
+
+.messageDiv textarea {
+    border-radius: 0.5rem;
+    background-color: var(--gray-two);
+    color: var(--white);
+    min-height: 1.5rem;
+    outline: none;
+    border: solid var(--white) 2px;
+    padding: 2lvw;
+}
+
+.talkToUs input {
     min-width: 50lvw;
     max-width: 50lvw;
     border-radius: 0.5rem;

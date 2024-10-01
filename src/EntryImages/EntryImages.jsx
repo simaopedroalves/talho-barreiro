@@ -4,10 +4,8 @@ export function EntryImages () {
     return (
         <>
             <div className="entryImages">
-                {/* <div className='entryText'> */}
                     <p>Comprove a diferença da qualidade</p>
                     {/* <p>O local onde a carne é a peça central e onde o corte faz a diferença.</p> */}
-                {/* </div> */}
             </div>
            
             <Product product = {{

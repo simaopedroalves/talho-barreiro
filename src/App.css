@@ -10,8 +10,10 @@
 }
 
 :root {
-  --brown: rgb(54, 34, 34);
-  --black: rgb(23, 16, 16);
+  --brown: rgba(54, 34, 34);
+  --black: rgba(23, 16, 16);
+  --brown-two: rgba(54, 34, 34, 0.6);
+  --black-two: rgba(23, 16, 16, 0.6);
   --gray-one: rgb(66, 63, 62);
   --gray-two: rgb(43, 43, 43);
   --white:  rgb(254, 250, 246);
