@@ -4,7 +4,7 @@ import { useState } from 'react';
 export function Contact () {
     return (
         <div className='contact'>
-            <h1>Contactos</h1>
+            <h1 id='Contactos'>Contactos</h1>
             
             <Address props = {{
                 icon: "fa-solid fa-location-dot",
@@ -19,10 +19,10 @@ export function Contact () {
                 paragraphTwo: '917 443 736'
             }}/>
 
-            <Contacts props = {{
+            <Address props = {{
                 icon: "fa-solid fa-envelope",
                 title: 'Email',
-                paragraphOne: 'barreirodesde1986@gmail.com'
+                paragraph: 'barreirodesde1986@gmail.com'
             }}/>
             
             <TalkToUs />
@@ -61,7 +61,6 @@ function TalkToUs () {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('Olá equipa do Talho Barreiro');
-    const [text, setText] = useState('');
 
     function handleChangeName(e) {
         setName(e.target.value);
@@ -77,9 +76,6 @@ function TalkToUs () {
 
     function submitForm(e) {
         e.preventDefault()
-
-       
-        
     }
 
     return (
@@ -104,8 +100,6 @@ function TalkToUs () {
 
             <button type='submit' className='submitBtn' onClick={submitForm}>Enviar</button>
 
-
-            <p>{text}</p>
         </form>
     );
 }

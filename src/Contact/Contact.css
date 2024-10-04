@@ -2,10 +2,10 @@
     display: grid;
     justify-content: center;
     text-align: center;
-    margin: 4rem auto;
+    margin: 4rem auto 0 auto;
     background-color: var(--gray-one);
     gap: 5lvh;
-    padding: 3lvw;
+    padding: 3lvw 3lvw 0 3lvw;
 }
 
 .contact h1 {

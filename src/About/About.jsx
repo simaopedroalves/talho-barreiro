@@ -3,7 +3,7 @@ import './About.css'
 export function About () {
     return (
         <div className='about'>
-            <h1>Sobre nós</h1>
+            <h1 id='Sobre'>Sobre nós</h1>
 
             <div>
                 <img src="/public/Images/frente-de-loja.jpg" alt="Frente de Loja do Talho Barreiro" className='aboutImage'/>

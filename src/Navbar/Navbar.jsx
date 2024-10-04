@@ -2,12 +2,12 @@ export function Navbar() {
 
     return (
       <div>
-            <header className="header">
+            <header className="header" >
                 <img src="./Images/logo-img.jpeg" onClick={handleBackHome} alt="" id="logoImg"/>
                 <h1 className="companyName">Talho Barreiro</h1>
                 <i className="fa-solid fa-ellipsis" onClick={handleMenu}></i>
             </header>
-            <nav className='navbar'>
+            <nav className='navbar' id="VoltarAoTopo">
                 <ul className="menu-options-disabled menu-list">
                     <li onClick={handleSobre}>Sobre</li>
                     <li onClick={handleContactos}>Contactos</li>
