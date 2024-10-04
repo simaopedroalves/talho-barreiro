@@ -6,7 +6,7 @@ export function About () {
             <h1 id='Sobre'>Sobre nós</h1>
 
             <div>
-                <img src="/public/Images/frente-de-loja.jpg" alt="Frente de Loja do Talho Barreiro" className='aboutImage'/>
+                <img src="./Images/frente-de-loja.jpg" alt="Frente de Loja do Talho Barreiro" className='aboutImage'/>
             </div>
             <p>
                 O Talho do Barreiro destingue-se pelo atendimento personalizado 
