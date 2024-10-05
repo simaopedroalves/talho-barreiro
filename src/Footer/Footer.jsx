@@ -12,7 +12,9 @@ const footer = {
 const li = {
     listStyle: 'none',
     fontWeight: 'bold',
-    fontSize: '1.2rem'
+    fontSize: '1.2rem',
+    // maxWidth: 'fit-content'
+
 }
 
 const a= {
@@ -54,12 +56,13 @@ export function Footer () {
                 {links}
             </ul>
             <SocialMedia/>
+            <Schedule/>
             <DevName/>
         </footer>
     );
 }
 
-function SocialMedia () {
+export function SocialMedia () {
     
     //Style
 
@@ -116,7 +119,7 @@ function DevName () {
 
     const devName = devArr.map((el) => {
         return (
-            <p style={devNameStyle}>Desenvolvido por
+            <p key={el.name} style={devNameStyle}>Desenvolvido por
                 <a href={el.portfolio} style={aDevName}>
                     {el.name}
                 </a>
@@ -128,5 +131,28 @@ function DevName () {
         <>
         {devName}
         </>
+    );
+}
+
+function Schedule () {
+
+    const schedule = [
+        {day: '2ª', time: '10:00 - 19:30'},
+        {day: '3ª a 6ª', time: '08:30 - 19:30'},
+        {day: 'Sábado', time: '08:30 - 13:30'},
+        {day: 'Almoço', time: '13:00 - 14:30'}
+    ]
+
+    const scheduleArr = schedule.map((el) => {
+        return (
+            <li key={el.day}>{el.day} {el.time}</li>
+        );
+    })
+
+    return (
+        <ul className='schedule'>
+            <p>Horário Funcionamento</p>
+            {scheduleArr}
+        </ul>
     );
 }

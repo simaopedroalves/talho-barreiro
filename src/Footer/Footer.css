@@ -1,0 +1,23 @@
+.schedule {
+    margin: 10lvh auto;
+    text-align: center;
+    color: var(--white);
+    display: grid;
+    gap: 3lvh;
+}
+
+.schedule li:last-child {
+    background-color: var(--gray-two);
+    max-width: fit-content;
+    text-align: center;
+    padding: 2lvh;
+    margin: 0 auto;
+    list-style: none;
+    border-radius: 1rem;
+}
+
+.schedule p {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: large;
+}
