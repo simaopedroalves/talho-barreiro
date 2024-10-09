@@ -58,24 +58,79 @@ function Contacts ({props}) {
 
 function TalkToUs () {
 
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
     const [message, setMessage] = useState('Olá equipa do Talho Barreiro');
+    const submitBtn = document.querySelector('#submitButton');
+
+    function invalidForm() {
+        submitBtn.disabled = true;
+    }
+
+    function validForm() {
+        submitBtn.disabled = false;
+    }
 
     function handleChangeName(e) {
         setName(e.target.value);
+
+        let regex = new RegExp(/^[a-z\s\ã\í\é]+$/gi);
+        let nameTyped = e.target.value;
+
+        regex.test(nameTyped) ? validName() : invalidName();
+         
     }
+
+    // ==== NAME VALIDATION ====
+
+    const nameInput = document.querySelector('#name');
+
+    function validName () {{ 
+        nameInput.style.border = 'solid var(--white) 2px';
+        validForm()
+    }}
+
+    function invalidName () {{
+        nameInput.style.border = 'solid var(--red) 2px';
+        invalidForm()
+    }}
+
 
     function handleChangeEmail(e) {
         setEmail(e.target.value);
+
+        let regex = new RegExp(/[A-Za-z0-9\._%+\-]+@[A-Za-z0-9\.\-]+\.[A-Za-z]{2,}/gi);
+        let emailTyped = e.target.value;
+
+        regex.test(emailTyped) ? validEmail() : invalidEmail();
+
     }
+
+    // ==== EMAIL VALIDATION ====
+
+    const emailInput = document.querySelector('#email');
+
+    function validEmail () {{ 
+        emailInput.style.border = 'solid var(--white) 2px';
+        validForm()
+    }}
+
+    function invalidEmail () {{
+        emailInput.style.border = 'solid var(--red) 2px';
+        invalidForm()
+    }}
+
+    // ==== MESSAGE ===
 
     function handleChangeMessage(e) {
         setMessage(e.target.value);
     }
 
+    // ==== SUBMIT BUTTON VALIDATION
+
     function submitForm(e) {
-        e.preventDefault()
+        e.preventDefault();
+        
     }
 
     return (
@@ -98,7 +153,7 @@ function TalkToUs () {
                 <textarea name="Mensagem" id="message" rows="10" value={message} onChange={handleChangeMessage}></textarea>
             </div>
 
-            <button type='submit' className='submitBtn' onClick={submitForm}>Enviar</button>
+            <button type='submit' className='submitBtn' onClick={submitForm} id='submitButton'>Enviar</button>
 
         </form>
     );

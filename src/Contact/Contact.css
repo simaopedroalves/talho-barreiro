@@ -75,7 +75,7 @@
     color: var(--white);
     min-height: 1.5rem;
     outline: none;
-    border: solid var(--white) 2px;
+    /* border: solid var(--white) 2px; */
     padding: 2lvw;
 }
 
@@ -88,4 +88,9 @@
     background-color: var(--white);
     color: var(--gray-one);
     border-radius: 0.8rem;
+}
+
+.submitBtn:disabled {
+    background-color: var(--gray-one);
+    color: var(--gray-two);
 }

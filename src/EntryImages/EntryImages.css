@@ -29,9 +29,12 @@
 }
 
 .product-image {
+    min-height: 60lvw;
+    min-width: 60lvw;
     max-width: 60lvw;
     object-fit: cover;
     margin: 0 auto;
+    border-radius: 1rem;
 }
 
 .product-box-presentation:nth-child(odd) {

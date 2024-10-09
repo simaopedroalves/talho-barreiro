@@ -10,28 +10,33 @@ export function EntryImages () {
            
             <Product product = {{
                 title: "Picanha", 
-                description: 'Esta picanha é que é boa',
+                description: 'A nossa picanha nacional é uma verdadeira iguaria que' +
+                              'revela o sabor intenso da carne portuguesa.' + 
+                              'Com uma textura macia e suculenta, é perfeita para grelhados em família. Venha saborear esta delícia!',
                 urlImage: "./Images/picanha.jpg"
                 }}
             />
 
             <Product product = {{
                 title: "Vazio", 
-                description: 'Este Vazio é muito bom!',
+                description: 'O bife do vazio é um corte que combina sabor e qualidade, proveniente das melhores carnes portuguesas.' + 
+                            'A sua marmoreio proporciona um gosto inigualável em cada garfada. Visite-nos e experimente um pedaço do paraíso!',
                 urlImage: "./Images/vazio.jpg"
                 }}
             />  
 
             <Product product = {{
                 title: "Tomahawk", 
-                description: 'Este tomahawk é muito bom!',
+                description: 'O tomahawk é um espetáculo à mesa, de osso comprido e carne tenra, este corte impressiona não só pelo tamanho,' + 
+                                'mas também pelo sabor robusto. Uma experiência imperdível para os verdadeiros apreciadores de carne!',
                 urlImage: "./Images/tomahawk.jpg"
                 }}
             />  
 
             <Product product = {{
                 title: "Bochecha Porco", 
-                description: 'Estas bochechas são muito boas!',
+                description: 'Um tesouro da culinária portuguesa! Oferecem uma textura rica e um sabor profundo.' + 
+                            'Cozidas lentamente, derretem na boca. Venha provar e descubra um novo nível de prazer gastronómico!',
                 urlImage: "./Images/bochecha-porco.jpg"
                 }}
             />  

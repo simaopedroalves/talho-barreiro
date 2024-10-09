@@ -25,7 +25,7 @@
 .navbar {
     position: fixed;
     top: 10vh;
-    right: 0;
+    right: -100vw;
     bottom: 0;
     transition: 500ms;
     min-width: 80vw;
@@ -40,23 +40,8 @@
     z-index: 999;
 }
 
-/* ul li {
-    list-style: none;
-    border: var(--gray-one) solid 2px;
-    margin: 0 auto;
-    min-width: 100%;
-    min-height: calc(50vh/5);
-    color: var(--white);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: larger;
-    font-weight: bold;
-    text-transform: uppercase;
-} */
-
-.menu-options-disabled {
-    right: -100vw;
+.menu-options-enabled {
+    right: 0;
     transition: 500ms;
 }
 

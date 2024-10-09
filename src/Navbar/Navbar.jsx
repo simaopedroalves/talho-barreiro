@@ -36,7 +36,7 @@ export function Navbar() {
             </header>
 
             <nav className='navbar' id="VoltarAoTopo">
-                <ul className="menu-options-disabled menu-list" style={ul}>
+                <ul className="" style={ul}>
                     <MenuOptions />
                     <SocialMedia />
                 </ul>
@@ -45,12 +45,10 @@ export function Navbar() {
     );
 }
 
-
+const menuList = document.querySelector('.navbar');
 
 function handleMenu () {
-    let menuList = document.querySelector('.navbar');
-
-    menuList.classList.toggle('menu-options-disabled');
+    menuList.classList.toggle('menu-options-enabled');
 }
 
 function MenuOptions () {
@@ -64,11 +62,11 @@ function MenuOptions () {
 
     const optionsArr = options.map((el) => {
         return (
-            <li key={el.name} style={li}>
+            <li key={el.name} style={li} onClick={handleMenu}>
                 <a href={el.link} style={a}>{el.name}</a>
             </li>
         );
-    })
+    });
     
     return (
         <>{optionsArr}</>
