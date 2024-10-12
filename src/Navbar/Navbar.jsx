@@ -25,6 +25,8 @@ const a = {
 
 }
 
+
+
 export function Navbar() {
 
     return (
@@ -48,7 +50,8 @@ export function Navbar() {
 const menuList = document.querySelector('.navbar');
 
 function handleMenu () {
-    menuList.classList.toggle('menu-options-enabled');
+    menuList.classList.toggle('menu-enabled');
+    
 }
 
 function MenuOptions () {

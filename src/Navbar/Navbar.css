@@ -40,7 +40,7 @@
     z-index: 999;
 }
 
-.menu-options-enabled {
+.menu-enabled {
     right: 0;
     transition: 500ms;
 }
