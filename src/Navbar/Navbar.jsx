@@ -1,5 +1,5 @@
 import { SocialMedia } from "../Footer/Footer";
-
+import './Navbar.css'
 //STYLE
 
 const ul = {
