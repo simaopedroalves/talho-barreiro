@@ -33,12 +33,17 @@ export function Contact () {
 
 
 function Address ({props}) {
+
+    const sendEmail = () => {
+        window.location.href = `mailto:${props.paragraph}`
+    }
+
     return (
         <>
             <div className='address'>
                 <i className={props.icon}></i>
                 <h2>{props.title}</h2>
-                <p>{props.paragraph}</p>
+                <p onClick={sendEmail}>{props.paragraph}</p>
             </div>
         </>
     );
