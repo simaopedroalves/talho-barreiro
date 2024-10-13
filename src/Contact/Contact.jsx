@@ -1,5 +1,6 @@
 import './Contact.css'
 import { useState } from 'react';
+import React from 'react';
 
 export function Contact () {
     return (
@@ -15,8 +16,8 @@ export function Contact () {
             <Contacts props = {{
                 icon: "fa-solid fa-phone",
                 title: 'Telefone',
-                paragraphOne: '252 375 776',
-                paragraphTwo: '917 443 736'
+                paragraphOne: '917 443 736 ',
+                paragraphTwo: '252 375 776'
             }}/>
 
             <Address props = {{
@@ -44,13 +45,27 @@ function Address ({props}) {
 }
 
 function Contacts ({props}) {
+    const [phoneNumber, setPhoneNumber] = useState('');
+    const [mobileNumber, setMobileNumber] = useState('');
+
+    const mobilePhoneCall = () => {
+        setMobileNumber(`A ligar para ${props.paragraphOne}...`)
+        window.location.href = `tel:${props.paragraphOne}`
+        
+    }
+
+    const phoneCall = () => {
+        setPhoneNumber(`A ligar para ${props.paragraphTwo}...`)
+        window.location.href = `tel:${props.paragraphTwo}`
+    }
+
     return (
         <>
             <div className='address'>
                 <i className={props.icon}></i>
                 <h2>{props.title}</h2>
-                <p>{props.paragraphOne}</p>
-                <p>{props.paragraphTwo}</p>
+                <p onClick={mobilePhoneCall}>{props.paragraphOne}</p>
+                <p onClick={phoneCall}>{props.paragraphTwo}</p>
             </div>
         </>
     );
