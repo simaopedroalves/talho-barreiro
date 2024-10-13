@@ -153,11 +153,10 @@ function TalkToUs () {
         
     }
 
-    const clientName = document.querySelector('#name')
 
     return (
-        <form action="" className='talkToUs' name='mensagem' method='POST' data-netlify="true">
-            <input type="hidden" name='Nova_Mensagem' value={`Nova mensagem de ${clientName.value}`} data-remove-prefix/>
+        <form action="" className='talkToUs' name='mensagem' method='POST' netlify>
+            <input type="hidden" name='Nova_Mensagem' value={`Nova mensagem de ${name}`} data-remove-prefix/>
 
             <h3>Deixe-nos a sua mensagem</h3>
 
