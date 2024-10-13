@@ -1,5 +1,7 @@
+import { useState } from "react";
 import { SocialMedia } from "../Footer/Footer";
 import './Navbar.css'
+import React from "react";
 //STYLE
 
 const ul = {
@@ -26,18 +28,24 @@ const a = {
 }
 
 
-
 export function Navbar() {
+
+    
+const [activeMenu, setActiveMenu] = useState(false);
+    
+const toggleMenu = () => {
+    setActiveMenu(!activeMenu);
+}
 
     return (
       <div>
             <header className="header" >
                 <img src="./Images/logo-img.jpeg" alt="" id="logoImg"/>
                 <h1 className="companyName">Talho Barreiro</h1>
-                <i className="fa-solid fa-ellipsis" onClick={handleMenu}></i>
+                <i className="fa-solid fa-ellipsis" onClick={toggleMenu}></i>
             </header>
 
-            <nav className='navbar' id="VoltarAoTopo">
+            <nav className={`navbar ${activeMenu ? 'openMenu' : ''}`} id="VoltarAoTopo">
                 <ul className="" style={ul}>
                     <MenuOptions />
                     <SocialMedia />
@@ -49,13 +57,8 @@ export function Navbar() {
 
 const menuList = document.querySelector('.navbar');
 
-function handleMenu () {
-    menuList.classList.toggle('menu-enabled');
-    
-}
-
 function MenuOptions () {
-    
+
     const options = [
         {name: 'Sobre', link: '#Sobre'},
         {name: 'Produtos', link: '#Produtos'},
@@ -64,8 +67,9 @@ function MenuOptions () {
     ]
 
     const optionsArr = options.map((el) => {
+
         return (
-            <li key={el.name} style={li} onClick={handleMenu}>
+            <li key={el.name} style={li} >
                 <a href={el.link} style={a}>{el.name}</a>
             </li>
         );

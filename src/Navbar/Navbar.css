@@ -40,7 +40,7 @@
     z-index: 999;
 }
 
-.menu-enabled {
+.openMenu {
     right: 0;
     transition: 500ms;
 }
