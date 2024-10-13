@@ -137,10 +137,10 @@ function DevName () {
 function Schedule () {
 
     const schedule = [
-        {day: '2ª', time: '10:00 - 19:30'},
-        {day: '3ª a 6ª', time: '08:30 - 19:30'},
-        {day: 'Sábado', time: '08:30 - 13:30'},
-        {day: 'Almoço', time: '13:00 - 14:30'}
+        {day: '2ª -', time: '10:00 - 19:30'},
+        {day: '3ª a 6ª -', time: '08:30 - 19:30'},
+        {day: 'Sábado -', time: '08:30 - 13:30'},
+        {day: 'Almoço -', time: '13:00 - 14:30'}
     ]
 
     const scheduleArr = schedule.map((el) => {
