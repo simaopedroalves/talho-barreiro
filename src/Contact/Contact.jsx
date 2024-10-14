@@ -150,32 +150,41 @@ function TalkToUs () {
 
     function submitForm(e) {
         e.preventDefault();
+
+        const formData = new FormData(e.target);
+        const dataObj = Object.fromEntries(formData);
         
+
+        console.log(dataObj);
+        
+
     }
 
 
     return (
-        <form action="" className='talkToUs' name='mensagem' method='POST' netlify>
+        
+        <form action="" className='talkToUs' name='mensagem' method='POST' onSubmit={submitForm}>
             <input type="hidden" name='Nova_Mensagem' value={`Nova mensagem de ${name}`} data-remove-prefix/>
+            <input type="hidden" name='form-name' value="mensagem"/>
 
             <h3>Deixe-nos a sua mensagem</h3>
 
             <div>
                 <label htmlFor="name">Nome</label>
-                <input type="text" id='name' name='Nome' value={name} onChange={handleChangeName}/>
+                <input required type="text" id='name' name='Nome' value={name} onChange={handleChangeName}/>
             </div>
 
             <div>
                 <label htmlFor="email">Email</label>
-                <input type="email" id='email' name='Email' value={email} onChange={handleChangeEmail}/>
+                <input required type="email" id='email' name='Email' value={email} onChange={handleChangeEmail}/>
             </div>
 
             <div className='messageDiv'>
                 <label htmlFor="message">Mensagem</label>
-                <textarea name="Mensagem" id="message" rows="10" value={message} onChange={handleChangeMessage}></textarea>
+                <textarea required name="Mensagem" id="message" rows="10" value={message} onChange={handleChangeMessage}></textarea>
             </div>
 
-            <button type='submit' className='submitBtn' onClick={submitForm} id='submitButton'>Enviar</button>
+            <button type='submit' className='submitBtn' id='submitButton'>Enviar</button>
 
         </form>
     );
