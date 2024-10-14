@@ -162,8 +162,8 @@ function TalkToUs () {
 
 
     return (
-        
-        <form action="" className='talkToUs' name='mensagem' method='POST' onSubmit={submitForm}>
+
+        <form action="/mensagem" className='talkToUs' name='mensagem' method='POST' onSubmit={submitForm}>
             <input type="hidden" name='Nova_Mensagem' value={`Nova mensagem de ${name}`} data-remove-prefix/>
             <input type="hidden" name='form-name' value="mensagem"/>
 
