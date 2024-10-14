@@ -148,22 +148,24 @@ function TalkToUs () {
 
     // ==== SUBMIT BUTTON VALIDATION
 
-    function submitForm(e) {
-        e.preventDefault();
+    // function submitForm(e) {
+    //     e.preventDefault();
 
-        const formData = new FormData(e.target);
-        const dataObj = Object.fromEntries(formData);
+    //     const formData = new FormData(e.target);
+    //     const dataObj = Object.fromEntries(formData);
         
 
-        console.log(dataObj);
+    //     console.log(dataObj);
         
 
-    }
+    // }
 
 
     return (
 
-        <form action="/mensagem" className='talkToUs' name='mensagem' method='POST' onSubmit={submitForm}>
+        // <form action="/mensagem" className='talkToUs' name='mensagem' method='POST' onSubmit={submitForm}>
+        <form action="/mensagem" className='talkToUs' name='mensagem' method='POST'>
+
             <input type="hidden" name='Nova_Mensagem' value={`Nova mensagem de ${name}`} data-remove-prefix/>
             <input type="hidden" name='form-name' value="mensagem"/>
 
