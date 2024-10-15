@@ -13,8 +13,6 @@ const li = {
     listStyle: 'none',
     fontWeight: 'bold',
     fontSize: '1.2rem',
-    // maxWidth: 'fit-content'
-
 }
 
 const a= {
@@ -69,7 +67,7 @@ export function SocialMedia () {
     const ulSocialMedia = {
         display: 'flex',
         justifyContent: 'center',
-        gap: '5lvw',
+        gap: '3lvw',
         fontSize: '2rem',
         color: 'white'
     }

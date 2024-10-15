@@ -7,6 +7,12 @@
     margin: 2rem auto;
 }
 
+.about div {
+    display: grid;
+    justify-content: center;
+    gap: 2rem;
+}
+
 .about h1 {
     font-weight: bold;
     text-transform: uppercase;
@@ -17,4 +23,35 @@
     max-width: 100lvw;
     max-height: 50lvh;
     border-radius: 1rem;
+}
+
+@media (orientation: landscape) and (max-width: 690px) {
+
+    .about {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 0 5lvw;
+        align-items: center;
+    }
+
+    .about div {
+        gap: 0.5rem;
+    }
+
+    .about h1 {
+        grid-column: span 3;
+    }
+
+    .about .imageDiv {
+        grid-column: span 2;
+        max-height: 70lvh;
+    }
+
+    .aboutImage {
+        max-height: 70lvh;
+        
+        /* min-width: 100%; */
+        object-fit: contain;
+    }
+
+
 }

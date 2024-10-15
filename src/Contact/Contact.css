@@ -94,3 +94,23 @@
     background-color: var(--gray-one);
     color: var(--gray-two);
 }
+
+@media (orientation: landscape) and (max-width: 690px) {
+
+    .contact {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .address {
+        min-width: 40lvw;
+        max-width: 40lvw;
+        margin:  0 auto;
+    }
+
+    .contact h1,
+    .address:nth-child(4),
+    .talkToUs {
+        grid-column: span 2;
+    }
+
+}

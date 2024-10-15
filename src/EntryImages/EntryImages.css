@@ -54,3 +54,28 @@
     gap: 2rem;
     padding: 2rem;
 }
+
+@media (orientation: landscape) and (max-width: 670px) {
+
+    .product-box-presentation {
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+    }
+
+    .product-box-presentation h1 {
+        grid-column: span 3;
+
+    }
+
+    .product-box-presentation p {
+        grid-column: span 2;
+    }
+
+    .product-image {
+        min-height: 30lvw;
+        max-height: 60lvh;
+        min-width: 50lvw;
+        max-width: 50lvw;
+    }
+
+}

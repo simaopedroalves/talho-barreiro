@@ -1,35 +1,8 @@
 import { useState } from "react";
 import { SocialMedia } from "../Footer/Footer";
-import './Navbar.css'
 import React from "react";
-//STYLE
-
-const ul = {
-    display: 'grid',
-    justifyContent: 'center',
-    textAlign: 'center'
-
-}
-
-const li = {
-    listStyle: 'none',
-    textTransform: 'uppercase',
-    textDecoration: 'none',
-    minHeight: 'calc(50lvh/5)',
-    fontWeight: 'bold',
-    padding: '8lvw',
-    fontSize: '1.2rem'
-}
-
-const a = {
-    color: 'var(--white)',
-    textDecoration: 'none'
-
-}
-
 
 export function Navbar() {
-
     
 const [activeMenu, setActiveMenu] = useState(false);
     
@@ -40,17 +13,25 @@ const toggleMenu = () => {
     return (
       <div>
             <header className="header" >
-                <img src="./Images/logo-img.jpeg" alt="" id="logoImg"/>
-                <h1 className="companyName">Talho Barreiro</h1>
+                <div className="logo">
+                    <img src="./Images/logo-img.jpeg" alt="" id="logoImg"/>
+                    <h1 className="companyName">Talho Barreiro</h1>
+                </div>
                 <i className="fa-solid fa-ellipsis" onClick={toggleMenu}></i>
+                <nav className={`navbar ${activeMenu ? 'openMenu' : ''}`} id="VoltarAoTopo">
+                    <ul className="">
+                        <MenuOptions />
+                        <SocialMedia />
+                    </ul>
+                </nav>
             </header>
 
-            <nav className={`navbar ${activeMenu ? 'openMenu' : ''}`} id="VoltarAoTopo">
+            {/* <nav className={`navbar ${activeMenu ? 'openMenu' : ''}`} id="VoltarAoTopo">
                 <ul className="" style={ul}>
                     <MenuOptions />
                     <SocialMedia />
                 </ul>
-            </nav>
+            </nav> */}
       </div>
     );
 }
@@ -69,8 +50,8 @@ function MenuOptions () {
     const optionsArr = options.map((el) => {
 
         return (
-            <li key={el.name} style={li} >
-                <a href={el.link} style={a}>{el.name}</a>
+            <li key={el.name}>
+                <a href={el.link}>{el.name}</a>
             </li>
         );
     });

@@ -7,15 +7,20 @@
     padding: 2vw;
     position: fixed;
     top: 0;
-    right: 0;
-    left: 0;
     z-index: 999;
     background-color: var(--white);
 }
 
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3lvw;
+}
+
 #logoImg {
     object-fit: cover;
-    max-width: 8vh;
+    max-width: 8lvh;
 }
 
 .companyName {
@@ -37,7 +42,7 @@
     justify-content: center;
     margin: 0 auto;
     background-color: var(--gray-one);
-    z-index: 999;
+    z-index: 9;
 }
 
 .openMenu {
@@ -45,3 +50,125 @@
     transition: 500ms;
 }
 
+ul {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+li {
+    text-decoration: none;
+    list-style: none;
+    text-transform: uppercase;
+    min-height: calc(50lvh/5);
+    font-weight: bold;
+    padding: 8lvw;
+    font-size: 1.2rem;
+    margin: 0 auto;
+}
+
+a {
+    color: var(--white);
+    text-decoration: none
+}
+
+@media (orientation: landscape) and (max-width: 690px) {
+
+    .header {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .logo {
+        grid-column: span 2;
+    }
+
+    .navbar {
+        grid-column: span 2;
+        position: initial;
+
+        margin: 0 auto;
+        max-width: fit-content;
+        min-height: fit-content;
+        background-color: var(--white);
+    }
+
+    .navbar ul {
+        display: flex;
+        max-width: 100lvw;
+        /* justify-content: space-around; */
+        gap: 1rem;
+        margin: 0 auto;
+     
+    }
+    
+    .navbar li {
+        min-height: 1rem;
+        max-height: fit-content;
+        padding: 0;
+        background-color: var(--white);
+        color: var(--gray-one);
+    }
+
+    a {
+        color: var(--gray-one);
+
+    }
+    
+    .fa-ellipsis {
+        display: none;
+    }
+
+
+}
+
+@media screen and (min-width: 700px) {
+    
+    .header {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: space-around;
+
+    }
+
+    .logo {
+        grid-column: span 2;
+    }
+
+    .navbar {
+        /* grid-column: span 2; */
+        position: initial;
+        margin: 0 auto;
+        max-width: fit-content;
+        min-height: fit-content;
+        background-color: var(--white);
+    }
+    
+    
+    .navbar ul {
+        display: flex;
+        max-width: 100lvw;
+        /* justify-content: space-around; */
+        gap: 1rem;
+        margin: 0 auto;
+     
+    }
+    
+    .navbar li {
+        min-height: 1rem;
+        max-height: fit-content;
+        padding: 0;
+        background-color: var(--white);
+        color: var(--gray-one);
+    }
+
+    a {
+        color: var(--gray-one);
+    }
+
+    .fa-ellipsis {
+        display: none;
+    }
+}

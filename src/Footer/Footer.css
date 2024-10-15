@@ -21,3 +21,25 @@
     text-transform: uppercase;
     font-size: large;
 }
+
+
+@media (orientation: landscape) and (max-width: 690px) {
+    .navbar i {
+        color: var(--gray-two);
+    }
+
+    ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+        margin: 0 auto;
+        gap: 1lvh;
+        padding: 0;
+    }
+
+    .schedule p,
+    .schedule li:last-of-type {
+        grid-column: span 3;
+    }
+
+}
