@@ -15,7 +15,7 @@ const toggleMenu = () => {
             <header className="header" >
                 <div className="logo">
                     <img src="./Images/logo-img.jpeg" alt="" id="logoImg"/>
-                    <h1 className="companyName">Talho Barreiro</h1>
+                    <h3 className="companyName">Talho Barreiro</h3>
                 </div>
                 <i className="fa-solid fa-ellipsis" onClick={toggleMenu}></i>
                 <nav className={`navbar ${activeMenu ? 'openMenu' : ''}`} id="VoltarAoTopo">
@@ -25,13 +25,7 @@ const toggleMenu = () => {
                     </ul>
                 </nav>
             </header>
-
-            {/* <nav className={`navbar ${activeMenu ? 'openMenu' : ''}`} id="VoltarAoTopo">
-                <ul className="" style={ul}>
-                    <MenuOptions />
-                    <SocialMedia />
-                </ul>
-            </nav> */}
+            
       </div>
     );
 }
