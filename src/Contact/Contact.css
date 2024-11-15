@@ -32,66 +32,6 @@
     font-size: 1rem;
 }
 
-.talkToUs {
-    margin: 5lvh auto;
-    min-width: 80lvw;
-    max-width: 80lvw;
-    text-align: center;
-    display: grid;
-    gap: 4lvh;
-    color: var(--white);
-}
-
-.talkToUs div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.talkToUs .messageDiv {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 4lvw;
-    text-align: left;
-}
-
-.messageDiv textarea {
-    border-radius: 0.5rem;
-    background-color: var(--gray-two);
-    color: var(--white);
-    min-height: 1.5rem;
-    outline: none;
-    border: solid var(--white) 2px;
-    padding: 2lvw;
-}
-
-.talkToUs input {
-    min-width: 50lvw;
-    max-width: 50lvw;
-    border-radius: 0.5rem;
-    background-color: var(--gray-two);
-    color: var(--white);
-    min-height: 1.5rem;
-    outline: none;
-    /* border: solid var(--white) 2px; */
-    padding: 2lvw;
-}
-
-.submitBtn {
-    max-width: fit-content;
-    padding: 2lvw;
-    margin: 0 auto;
-    outline: none;
-    border: none;
-    background-color: var(--white);
-    color: var(--gray-one);
-    border-radius: 0.8rem;
-}
-
-.submitBtn:disabled {
-    background-color: var(--gray-one);
-    color: var(--gray-two);
-}
 
 @media (orientation: landscape) and (max-width: 690px) {
 
@@ -106,8 +46,7 @@
     } */
 
     .contact h1,
-    .address:nth-child(4),
-    .talkToUs {
+    .address:nth-child(4) {
         grid-column: span 2;
     }
 
@@ -140,11 +79,5 @@
         color: var(--gray-one);
         background-color: var(--white);
     }
-
-    .talkToUs {
-        grid-column: span 3;
-    }
-
-
     
 }

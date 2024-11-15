@@ -17,3 +17,21 @@
   --white:  rgb(254, 250, 246);
   --red: rgb(255,0,0);
 }
+
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--brown);
+}
+
+body::-webkit-scrollbar-track {
+  background-color: var(--white);
+}
+
+body::-webkit-scrollbar {
+  background-color: var(--white);
+  width: 7px;
+}
+
+body::-webkit-scrollbar:horizontal {
+  display: none;
+}

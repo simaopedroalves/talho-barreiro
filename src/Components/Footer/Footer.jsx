@@ -1,35 +1,5 @@
 import './Footer.css'
 
-// Style
-
-const footer = {
-    backgroundColor: 'var(--gray-one)',
-    margin: 0,
-    border: 'none',
-    outline: 'none',
-    padding: '5lvh 0',
-}
-const li = {
-    listStyle: 'none',
-    fontWeight: 'bold',
-    fontSize: '1.2rem',
-}
-
-const a= {
-    textDecoration: 'none',
-    color: 'var(--white)',
-    cursor: 'pointer',
-}
-
-const ul = {
-    display: 'grid',
-    justifyContent: 'center',
-    gap: '5lvh',
-    alignItems: 'center',
-    padding: '5lvh 0',
-    textAlign: 'center'
-}
-
 export function Footer () {
 
     const footerLinkNames = [
@@ -42,19 +12,19 @@ export function Footer () {
 
     const links = footerLinkNames.map((element) => {
         return(
-            <li key={element.name} style={li}>
-                <a href={element.link} style={a}>{element.name}</a>
+            <li key={element.name} className='linkNames'>
+                <a href={element.link} >{element.name}</a>
             </li>
         );
     });
 
     return (
-        <footer style={footer}>
-            <ul style={ul}>
+        <footer>
+            <ul>
                 {links}
             </ul>
-            <SocialMedia/>
             <Schedule/>
+            <SocialMedia/>
             <DevName/>
         </footer>
     );
@@ -79,8 +49,8 @@ export function SocialMedia () {
 
     const socialMediaMap = socialMediaArr.map((el) => {
         return(
-            <li key={el.name} style={li}>
-                <a href={el.link} style={a}>
+            <li key={el.name}>
+                <a href={el.link}>
                     <i className={el.icon}></i>
                 </a>
             </li>
@@ -96,29 +66,14 @@ export function SocialMedia () {
 
 function DevName () {
     
-    //Style
-    const devNameStyle = {
-        textAlign: 'center',
-        color: 'var(--white)',
-        fontSize: '0.5rem',
-        margin: '10lvh 0'
-    }
-
-    const aDevName = {
-        textDecoration: 'none',
-        color: 'var(--white)',
-        cursor: 'pointer',
-        textDecoration: 'underline'
-    }
-
     const devArr = [
         {name: ' Simão Pedro', portfolio: 'https://portfoliosimaopedro.webdevsp.com/'}
     ]
 
     const devName = devArr.map((el) => {
         return (
-            <p key={el.name} style={devNameStyle}>Desenvolvido por
-                <a href={el.portfolio} style={aDevName}>
+            <p key={el.name} className='devName'>Desenvolvido por
+                <a href={el.portfolio}>
                     {el.name}
                 </a>
             </p>

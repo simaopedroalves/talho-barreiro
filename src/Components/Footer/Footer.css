@@ -1,0 +1,141 @@
+footer {
+    display: grid;
+    background-color: var(--gray-one);
+    margin: 0;
+    border: none;
+    outline: none;
+    padding: 5lvh 0;
+}
+
+footer ul {
+    display: grid;
+    justify-content: center;
+    gap: 5lvh;
+    align-items: center;
+    padding: 5lvh 0;
+    text-align: center;
+}
+
+.schedule {
+    margin: 10lvh auto;
+    text-align: center;
+    color: var(--white);
+    display: grid;
+    gap: 3lvh;
+}
+
+.schedule li:last-child {
+    background-color: var(--gray-two);
+    max-width: fit-content;
+    text-align: center;
+    padding: 2lvh;
+    margin: 0 auto;
+    list-style: none;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.schedule p {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: large;
+}
+
+.devName {
+    text-align: center;
+    color: var(--white);
+    font-size: 0.5rem;
+    margin: 10lvh 1rem;
+}
+
+.devName a {
+    color: var(--white);
+    cursor: pointer;
+    text-decoration: none;
+    transition: 500ms;
+
+}
+
+
+
+
+@media (orientation: landscape) and (max-width: 690px) {
+
+    .navbar i {
+        color: var(--gray-two);
+    }
+
+    ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+        margin: 0 auto;
+        gap: 1lvh;
+        padding: 0;
+    }
+
+    .schedule p,
+    .schedule li:last-of-type {
+        grid-column: span 3;
+    }
+
+}
+
+@media (min-width: 691px) {
+
+    footer {
+        padding: 0;
+        display: grid;
+        max-height: fit-content;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 10vh auto 0 auto;
+    }
+
+    footer ul {
+        gap: 0;
+        margin: 0 auto;
+        justify-items: center;
+        padding: 0;
+        max-width: fit-content;
+    }
+
+    .linkNames a {
+        padding: 0;
+        color: var(--white); 
+        font-size: 1rem;
+    }
+
+    footer ul li {
+        padding: 0;
+        margin: 0;
+        font-size: 1rem;
+    }
+
+    i {
+        color: var(--white); 
+        font-size: 1.5rem;
+        transition: 500ms;
+    }
+
+    i:hover {
+        color: var(--brown);
+        font-size: 2rem;
+    }
+
+    .devName {
+        grid-column: span 3;
+        font-size: 0.7rem;
+        margin: 2rem;
+    }
+
+    .devName a {
+        text-decoration: none;
+    }
+
+    .devName a:hover {
+        color: var(--brown);
+        background-color: var(--white);
+    }
+
+}

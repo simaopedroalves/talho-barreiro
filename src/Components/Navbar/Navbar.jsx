@@ -18,7 +18,7 @@ const toggleMenu = () => {
                     <h3 className="companyName">Talho Barreiro</h3>
                 </div>
                 <i className="fa-solid fa-ellipsis" onClick={toggleMenu}></i>
-                <nav className={`navbar ${activeMenu ? 'openMenu' : ''}`} id="VoltarAoTopo">
+                <nav className={`navbar ${activeMenu ? 'openMenu': ''}`} id="VoltarAoTopo">
                     <ul className="">
                         <MenuOptions />
                         <SocialMedia />
@@ -30,9 +30,16 @@ const toggleMenu = () => {
     );
 }
 
-const menuList = document.querySelector('.navbar');
+// const menuList = document.querySelector('.navbar');
 
 function MenuOptions () {
+
+    function toggleMenu() {
+        
+        let navbar = document.querySelector('.navbar');
+
+        navbar.classList.remove('openMenu');
+    }
 
     const options = [
         {name: 'Sobre', link: '#Sobre'},
@@ -45,7 +52,7 @@ function MenuOptions () {
 
         return (
             <li key={el.name}>
-                <a href={el.link}>{el.name}</a>
+                <a href={el.link} onClick={toggleMenu}>{el.name}</a>
             </li>
         );
     });
