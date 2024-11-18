@@ -31,7 +31,7 @@
 .navbar {
     position: fixed;
     top: 10vh;
-    right: -100vw;
+    right: -100lvw;
     bottom: 0;
     transition: 1000ms;
     min-width: 100lvw;

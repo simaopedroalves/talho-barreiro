@@ -4,13 +4,14 @@ footer {
     margin: 0;
     border: none;
     outline: none;
-    padding: 5lvh 0;
+    padding: 2lvh 0;
+    align-items: center;
 }
 
 footer ul {
     display: grid;
     justify-content: center;
-    gap: 5lvh;
+    gap: 2lvh;
     align-items: center;
     padding: 5lvh 0;
     text-align: center;
