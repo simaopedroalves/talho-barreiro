@@ -1,6 +1,6 @@
 import './Contact.css'
 import React from 'react';
-import Address from '../Components/Address/Address.jsx';
+import Address from '../Components/Address/address.jsx';
 import Contacts from '../Components/Contacts/contacts.jsx';
 import TalkToUs from '../Components/TalkToUs/talkToUs.jsx';
 
